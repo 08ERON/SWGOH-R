@@ -1,0 +1,189 @@
+base_id,name,Nickname,type
+AAYLASECURA,Aayla Secura,Aayla,characters
+ADMIRALACKBAR,Admiral Ackbar,AA,characters
+AHSOKATANO,Ahsoka Tano,AT,characters
+FULCRUMAHSOKA,Ahsoka Tano (Fulcrum),Fulcrum,characters
+AMILYNHOLDO,Amilyn Holdo,Holdo,characters
+ASAJVENTRESS,Asajj Ventress,AV,characters
+B2SUPERBATTLEDROID,B2 Super Battle Droid,B2,characters
+BARRISSOFFEE,Barriss Offee,Barriss,characters
+BASTILASHAN,Bastila Shan,Bastila,characters
+BAZEMALBUS,Baze Malbus,Baze,characters
+BB8,BB-8,BB8,characters
+BIGGSDARKLIGHTER,Biggs Darklighter,Biggs,characters
+BISTAN,Bistan,Bistan,characters
+BOBAFETT,Boba Fett,BF,characters
+BODHIROOK,Bodhi Rook,BR,characters
+BOSSK,Bossk,Bossk,characters
+CADBANE,Cad Bane,Bane,characters
+HOTHHAN,Captain Han Solo,CHS,characters
+PHASMA,Captain Phasma,Phasma,characters
+CASSIANANDOR,Cassian Andor,CA,characters
+CC2224,"CC-2224 ""Cody""",Cody,characters
+CHIEFCHIRPA,Chief Chirpa,CC,characters
+CHIEFNEBIT,Chief Nebit,CN,characters
+CHIRRUTIMWE,Chirrut Îmwe,Chirrut,characters
+CHOPPERS3,Chopper,Chopper,characters
+CLONESERGEANTPHASEI,Clone Sergeant - Phase I,CS,characters
+CLONEWARSCHEWBACCA,Clone Wars Chewbacca,Chewy,characters
+COLONELSTARCK,Colonel Starck,Starck,characters
+COMMANDERLUKESKYWALKER,Commander Luke Skywalker,CLS,characters
+CORUSCANTUNDERWORLDPOLICE,Coruscant Underworld Police,CUP,characters
+COUNTDOOKU,Count Dooku,Dooku,characters
+CT210408,"CT-21-0408 ""Echo""",Echo,characters
+CT5555,"CT-5555 ""Fives""",5s,characters
+CT7567,"CT-7567 ""Rex""",Rex,characters
+MAUL,Darth Maul,DM,characters
+DARTHNIHILUS,Darth Nihilus,DN,characters
+DARTHSIDIOUS,Darth Sidious,Sid,characters
+DARTHSION,Darth Sion,Sion,characters
+DARTHTRAYA,Darth Traya,DT,characters
+VADER,Darth Vader,DV,characters
+DATHCHA,Dathcha,Dathcha,characters
+DEATHTROOPER,Death Trooper,DT,characters
+DENGAR,Dengar,Dengar,characters
+DIRECTORKRENNIC,Director Krennic,Krennic,characters
+EETHKOTH,Eeth Koth,EK,characters
+EMPERORPALPATINE,Emperor Palpatine,EP,characters
+ENFYSNEST,Enfys Nest,Nest,characters
+EWOKELDER,Ewok Elder,EE,characters
+EWOKSCOUT,Ewok Scout,ES,characters
+EZRABRIDGERS3,Ezra Bridger,EB,characters
+FINN,Finn,Finn,characters
+FIRSTORDEREXECUTIONER,First Order Executioner,FOX,characters
+FIRSTORDEROFFICERMALE,First Order Officer,FOO,characters
+FIRSTORDERSPECIALFORCESPILOT,First Order SF TIE Pilot,FOSFTP,characters
+FIRSTORDERTROOPER,First Order Stormtrooper,FOS,characters
+FIRSTORDERTIEPILOT,First Order TIE Pilot,FOTP,characters
+GAMORREANGUARD,Gamorrean Guard,GG,characters
+GARSAXON,Gar Saxon,GS,characters
+ZEBS3,"Garazeb ""Zeb"" Orrelios",Zeb,characters
+GRIEVOUS,General Grievous,GG,characters
+GENERALKENOBI,General Kenobi,GK,characters
+VEERS,General Veers,GV,characters
+GEONOSIANSOLDIER,Geonosian Soldier,GS,characters
+GEONOSIANSPY,Geonosian Spy,Gspy,characters
+GRANDADMIRALTHRAWN,Grand Admiral Thrawn,GAT,characters
+GRANDMASTERYODA,Grand Master Yoda,GMY,characters
+GRANDMOFFTARKIN,Grand Moff Tarkin,GMT,characters
+GREEDO,Greedo,Greedo,characters
+HANSOLO,Han Solo,Han,characters
+HERASYNDULLAS3,Hera Syndulla,Hera,characters
+HERMITYODA,Hermit Yoda,Hyoda,characters
+HK47,HK-47,HK47,characters
+HOTHREBELSCOUT,Hoth Rebel Scout,HRScout,characters
+HOTHREBELSOLDIER,Hoth Rebel Soldier,HRSoldier,characters
+MAGNAGUARD,IG-100 MagnaGuard,IG100,characters
+IG86SENTINELDROID,IG-86 Sentinel Droid,IG86,characters
+IG88,IG-88,IG88,characters
+IMAGUNDI,Ima-Gun Di,IGD,characters
+IMPERIALPROBEDROID,Imperial Probe Droid,IPD,characters
+IMPERIALSUPERCOMMANDO,Imperial Super Commando,ISC,characters
+JAWA,Jawa,Jawa,characters
+JAWAENGINEER,Jawa Engineer,JE,characters
+JAWASCAVENGER,Jawa Scavenger,JS,characters
+JEDIKNIGHTCONSULAR,Jedi Consular,JC,characters
+ANAKINKNIGHT,Jedi Knight Anakin,JKA,characters
+JEDIKNIGHTGUARDIAN,Jedi Knight Guardian,JKG,characters
+JOLEEBINDO,Jolee Bindo,JB,characters
+JYNERSO,Jyn Erso,JE,characters
+K2SO,K-2SO,K2SO,characters
+KANANJARRUSS3,Kanan Jarrus,KJ,characters
+KITFISTO,Kit Fisto,KF,characters
+KYLOREN,Kylo Ren,Kylo,characters
+KYLORENUNMASKED,Kylo Ren (Unmasked),KRU,characters
+L3_37,L3-37,L337,characters
+ADMINISTRATORLANDO,Lando Calrissian,Lando,characters
+LOBOT,Lobot,Lobot,characters
+LOGRAY,Logray,Logray,characters
+LUKESKYWALKER,Luke Skywalker (Farmboy),Farmboy,characters
+LUMINARAUNDULI,Luminara Unduli,Lumi,characters
+MACEWINDU,Mace Windu,Mace,characters
+MAGMATROOPER,Magmatrooper,Magma,characters
+HUMANTHUG,Mob Enforcer,ME,characters
+MOTHERTALZIN,Mother Talzin,MT,characters
+NIGHTSISTERACOLYTE,Nightsister Acolyte,Acolyte,characters
+NIGHTSISTERINITIATE,Nightsister Initiate,Initiate,characters
+NIGHTSISTERSPIRIT,Nightsister Spirit,Spirit,characters
+NIGHTSISTERZOMBIE,Nightsister Zombie,Zombie,characters
+NUTEGUNRAY,Nute Gunray,Nute,characters
+OLDBENKENOBI,Obi-Wan Kenobi (Old Ben),OldBen,characters
+DAKA,Old Daka,Daka,characters
+PAO,Pao,Pao,characters
+PAPLOO,Paploo,Paploo,characters
+PLOKOON,Plo Koon,PK,characters
+POE,Poe Dameron,Poe,characters
+POGGLETHELESSER,Poggle the Lesser,Poggle,characters
+PRINCESSLEIA,Princess Leia,PL,characters
+QIRA,Qi'ra,Qira,characters
+QUIGONJINN,Qui-Gon Jinn,QGJ,characters
+R2D2_LEGENDARY,R2-D2,R2D2,characters
+RANGETROOPER,Range Trooper,RT,characters
+HOTHLEIA,Rebel Officer Leia Organa,ROLO,characters
+RESISTANCEPILOT,Resistance Pilot,RP,characters
+RESISTANCETROOPER,Resistance Trooper,RT,characters
+REYJEDITRAINING,Rey (Jedi Training),RJT,characters
+REY,Rey (Scavenger),Scav,characters
+ROSETICO,Rose Tico,Rosie,characters
+ROYALGUARD,Royal Guard,RG,characters
+SABINEWRENS3,Sabine Wren,Sabine,characters
+SAVAGEOPRESS,Savage Opress,Savage,characters
+SCARIFREBEL,Scarif Rebel Pathfinder,SRP,characters
+SHORETROOPER,Shoretrooper,Shore,characters
+SITHASSASSIN,Sith Assassin,SA,characters
+SITHMARAUDER,Sith Marauder,SM,characters
+SITHTROOPER,Sith Trooper,ST,characters
+SNOWTROOPER,Snowtrooper,Snow,characters
+STORMTROOPER,Stormtrooper,Storm,characters
+STORMTROOPERHAN,Stormtrooper Han,STH,characters
+SUNFAC,Sun Fac,Sunfac,characters
+TALIA,Talia,Talia,characters
+TEEBO,Teebo,Teebo,characters
+TIEFIGHTERPILOT,TIE Fighter Pilot,TFP,characters
+TUSKENRAIDER,Tusken Raider,TR,characters
+TUSKENSHAMAN,Tusken Shaman,TS,characters
+UGNAUGHT,Ugnaught,Ugh,characters
+URORRURRR,URoRRuR'R'R,UR,characters
+YOUNGCHEWBACCA,Vandor Chewbacca,Vandor,characters
+SMUGGLERCHEWBACCA,Veteran Smuggler Chewbacca,VetChewy,characters
+SMUGGLERHAN,Veteran Smuggler Han Solo,VetHan,characters
+VISASMARR,Visas Marr,Visas,characters
+WAMPA,Wampa,Wampa,characters
+WEDGEANTILLES,Wedge Antilles,Wedge,characters
+WICKET,Wicket,Wicket,characters
+YOUNGHAN,Young Han Solo,YHS,characters
+YOUNGLANDO,Young Lando Calrissian,YLC,characters
+ZAMWESELL,Zam Wesell,Zam,characters
+JEDISTARFIGHTERAHSOKATANO,Ahsoka Tano's Jedi Starfighter,ATJS,ships
+XWINGRED3,Biggs Darklighter's X-wing,BiggsX,ships
+UWINGSCARIF,Bistan's U-wing,BistanU,ships
+UWINGROGUEONE,Cassian's U-wing,CassianU,ships
+CAPITALCHIMAERA,Chimaera,Chim,ships
+ARC170CLONESERGEANT,Clone Sergeant's ARC-170,CSARC170,ships
+CAPITALJEDICRUISER,Endurance,Endurance,ships
+CAPITALSTARDESTROYER,Executrix,Executrix,ships
+TIEFIGHTERFOSF,First Order SF TIE Fighter,FOSFTF,ships
+TIEFIGHTERFIRSTORDER,First Order TIE Fighter,FOTF,ships
+GAUNTLETSTARFIGHTER,Gauntlet Starfighter,Gauntlet,ships
+GEONOSIANSTARFIGHTER2,Geonosian Soldier's Starfighter,GSS,ships
+GEONOSIANSTARFIGHTER3,Geonosian Spy's Starfighter,GspyS,ships
+GHOST,Ghost,Ghost,ships
+CAPITALMONCALAMARICRUISER,Home One,HO,ships
+TIEFIGHTERIMPERIAL,Imperial TIE Fighter,TF,ships
+JEDISTARFIGHTERCONSULAR,Jedi Consular's Starfighter,JCS,ships
+COMMANDSHUTTLE,Kylo Ren's Command Shuttle,KRCS,ships
+MILLENNIUMFALCONPRISTINE,Lando's Millennium Falcon,LandoMF,ships
+MILLENNIUMFALCONEP7,Millennium Falcon (Ep VII),MFVII,ships
+PHANTOM2,Phantom II,PhantomII,ships
+BLADEOFDORIN,Plo Koon's Jedi Starfighter,PKJS,ships
+XWINGBLACKONE,Poe Dameron's X-wing,PoeX,ships
+XWINGRESISTANCE,Resistance X-wing,ResistX,ships
+ARC170REX,Rex's ARC-170,RexARC170,ships
+SITHINFILTRATOR,Scimitar,Scimitar,ships
+SLAVE1,Slave I,Slave,ships
+GEONOSIANSTARFIGHTER1,Sun Fac's Geonosian Starfighter,SFGS,ships
+TIEADVANCED,TIE Advanced x1,TAX1,ships
+TIEREAPER,TIE Reaper,Reaper,ships
+TIESILENCER,TIE Silencer,Silencer,ships
+UMBARANSTARFIGHTER,Umbaran Starfighter,US,ships
+XWINGRED2,Wedge Antilles's X-wing,WedgeX,ships
