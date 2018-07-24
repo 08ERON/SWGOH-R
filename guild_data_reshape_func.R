@@ -3,7 +3,7 @@
 
 ### change this to the same working directory as the 
 ### swgoh.gg_guild_data script uses
-#setwd("/path/to/your/working/directory")
+setwd("/path/to/your/working/directory")
 
 ### change repo to suit or use the one given
 repo <- "https://cran.csiro.au/"

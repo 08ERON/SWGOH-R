@@ -27,7 +27,7 @@ setnames(data_dt_0, c(".id", 'rarity'), c("base_id", 'stars'))
 html_convert_func   <- function(u){
   alignment_html    <- read_html(u)
   vec_0 <- str_split(xml_text(alignment_html), "\n")[[1]]
-  vec_1 <- str_split(vec_0[grep("Side", vec_0)], " · ") 
+  vec_1 <- str_split(vec_0[grep("Side", vec_0)], " . ") 
   dt_0  <- llply(vec_1, function(x) data.table(rbind(x))) %>% rbindlist(fill=T)
   dt_1  <- cbind(name = vec_0[grep("Side", vec_0)+1], dt_0)
   dt_1  <- dt_1[name!=""]
