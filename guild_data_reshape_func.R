@@ -1,5 +1,9 @@
 ### function to output required
 ### subset of guild data
+###
+### args should be toon abbreviation (as per the "char_ships_nicknames.csv") 
+### and number of stars, in any order
+
 
 ### change this to the same working directory as the 
 ### swgoh.gg_guild_data script uses
@@ -27,10 +31,9 @@ char_stars <- na.omit(as.integer(subset_args))
 ### swgoh.gg_guild_data script
 guild_data <- fread("final_output.csv")
 
-### change which columns you want to keep
+### change which columns you want to keep as default
 in_cols <- c("name", "player", "stars", "level", "gear_level", "power", "zeta_1", "zeta_2", "zeta_3")
 
-### get all columns
 ### remove NA columns
 
 subset_data <- guild_data[base_id == baseid & stars == char_stars,  
@@ -39,8 +42,8 @@ subset_data <- guild_data[base_id == baseid & stars == char_stars,
 
 
 ### output in both csv and tsv
-write.table(subset_data, "subset_data.csv", sep=',', row.names = F)
-write.table(subset_data, "subset_data.tsv", sep='\t', row.names = F)
+write.table(player_data, "subset_data.csv", sep=",", row.names=F, qmethod='double')
+write.table(player_data, "subset_data.tsv", sep="\t", row.names=F, qmethod='double')
 
  
  
