@@ -31,6 +31,7 @@ html_convert_func   <- function(u){
   dt_0  <- llply(vec_1, function(x) data.table(rbind(x))) %>% rbindlist(fill=T)
   dt_1  <- cbind(name = vec_0[grep("Side", vec_0)+1], dt_0)
   dt_1  <- dt_1[name!=""]
+  dt_1[, name := gsub("^ ", "", name)]
   aff_names <- paste0("Affiliation_", 1:(ncol(dt_1)-3))
   setnames(dt_1, colnames(dt_1)[-1], c("Alignment", "Role", aff_names))
   return(dt_1)
