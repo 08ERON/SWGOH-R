@@ -73,5 +73,5 @@ guild_member_zetas <- sapply(2:length(guild_member_html_data), function(x){
 
 final_output <- left_join(data_dt_1, guild_member_zetas, by=c("player","name")) %>% data.table
 
-write.csv(final_output, "final_output.csv")
-write.table(final_output, "final_output.tsv", sep = "\t")
+write.table(final_output, "final_output.csv", sep=",", row.names=F, qmethod='double')
+write.table(final_output, "final_output.tsv", sep="\t", row.names=F, qmethod='double')
