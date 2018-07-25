@@ -21,3 +21,4 @@ Run the script with args describing the columns you want and the allowable value
 For example if you want to find all of guild member Oberon's  level 85, 7 star toons at gear level greater than 8 and Affiliation with either Sith or Empire and any role or power level:  
 `Rscript.exe guild_data_reshape_func.R player=Oberon stars=7 level=85 power=any gear_level=9,10,11,12 Affiliation=Sith,Empire Role=any`
 
+All of this was made possible by the swgoh.gg devs. Thanks fellas!
