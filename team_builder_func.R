@@ -5,8 +5,8 @@
 
 ### change this to the same working directory as the 
 ### swgoh.gg_guild_data script uses
-#setwd("/path/to/your/working/directory")
-setwd("C:/Users/Andy/Google Drive/swgoh/swgoh.gg_scraping/guild_data_git")
+setwd("/path/to/your/working/directory")
+
 ### change repo to suit or use the one given
 repo <- "https://cran.csiro.au/"
 
@@ -19,7 +19,6 @@ sapply(libraries, library, character.only = T, quietly = T)
 subset_args <- commandArgs(trailingOnly = T)
 
 ###testing
-# subset_args <- c("player=Oberon","stars=7", "level=85", "power=any", "gear_level=9,10,11,12", "Affiliation=Sith,Empire", "Role=any")
 
 ### interpreting args
 subset_args <- gsub(",", "|", subset_args)
