@@ -12,7 +12,7 @@ setwd("/path/to/your/working/directory")
 ### change repo to suit or use the one given
 repo <- "https://cran.csiro.au/"
 
-libraries <- c("data.table", "magrittr", "gridExtra")
+libraries <- c("data.table", "magrittr", "gridExtra", "stargazer")
 to_be_installed <- libraries[!libraries %in% installed.packages()[,"Package"]]
 if(length(to_be_installed)) install.packages(to_be_installed,  repos = repo)
 
@@ -49,5 +49,6 @@ png(filename = "subset_data.png", width=480,height=24*subset_data[, .N])
 grid.table(subset_data)
 dev.off()
  
- 
- 
+stargazer(subset_data, type='text', out = "subset_data.txt", summary=F)
+stargazer(subset_data, type='html', out = "subset_data.html", summary=F)
+

@@ -1,6 +1,6 @@
 ### function to help
 ### guild members put together a synergistic team
-### args should be: 
+### args should be as in the README
 
 
 ### change this to the same working directory as the 
@@ -10,7 +10,7 @@ setwd("/path/to/your/working/directory")
 ### change repo to suit or use the one given
 repo <- "https://cran.csiro.au/"
 
-libraries <- c("data.table", "magrittr", "stringr", "gridExtra")
+libraries <- c("data.table", "magrittr", "stringr", "gridExtra", "stargazer")
 to_be_installed <- libraries[!libraries %in% installed.packages()[,"Package"]]
 if(length(to_be_installed)) install.packages(to_be_installed,  repos = )
 
@@ -56,7 +56,8 @@ png(filename = "subset_data.png", width=1050,height=24*player_data[, .N])
 grid.table(player_data)
 dev.off()
 
-
+stargazer(player_data, type='text', out = "subset_data.txt", summary=F)
+stargazer(player_data, type='html', out = "subset_data.html", summary=F)
 
  
  
