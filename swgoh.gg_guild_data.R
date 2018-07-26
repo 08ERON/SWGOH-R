@@ -70,7 +70,6 @@ guild_member_zetas <- sapply(2:length(guild_member_html_data), function(x){
         return(player_zetas)
 }, simplify=F) %>% rbindlist(fill=T)
 
-
 final_output <- left_join(data_dt_1, guild_member_zetas, by=c("player","name")) %>% data.table
 
 write.table(final_output, "final_output.csv", sep=",", row.names=F, qmethod='double')

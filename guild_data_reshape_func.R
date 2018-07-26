@@ -42,8 +42,8 @@ subset_data <- guild_data[base_id == baseid & stars == char_stars,
 
 
 ### output in both csv and tsv
-write.table(player_data, "subset_data.csv", sep=",", row.names=F, qmethod='double')
-write.table(player_data, "subset_data.tsv", sep="\t", row.names=F, qmethod='double')
+write.table(subset_data, "subset_data.csv", sep=",", row.names=F, qmethod='double')
+write.table(subset_data, "subset_data.tsv", sep="\t", row.names=F, qmethod='double')
 
  
  
