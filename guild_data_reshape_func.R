@@ -36,7 +36,7 @@ in_cols <- c("name", "player", "stars", "level", "gear_level", "power", "zeta_1"
 
 ### remove NA columns
 
-subset_data <- guild_data[base_id == baseid & stars == char_stars,  
+subset_data <- guild_data[base_id == baseid & stars >= char_stars,  
            lapply(.SD, function(x) if(all(!is.na(x))) return(x)),
            .SDcols = in_cols]
 
