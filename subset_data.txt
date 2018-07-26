@@ -1,0 +1,19 @@
+
+================================================================================================================================================================
+   player         name            type    gear_level power  level stars Alignment   Role         Affiliation                           zeta                     
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+1  Oberon     Count Dooku      characters     10     11,469  85     6   Dark Side Support      Separatist,Sith                          NA                      
+2  Oberon      Darth Maul      characters     9      14,224  85     7   Dark Side Attacker          Sith                                NA                      
+3  Oberon    Darth Nihilus     characters     12     22,147  85     7   Dark Side Support           Sith                Lord of Hunger,Strength of the Void     
+4  Oberon    Darth Sidious     characters     11     18,903  85     7   Dark Side Attacker          Sith                           Sadistic Glee                
+5  Oberon      Darth Sion      characters     12     20,293  85     7   Dark Side   Tank            Sith                           Lord of Pain                 
+6  Oberon     Darth Vader      characters     12     22,909  85     7   Dark Side Attacker       Empire,Sith             Inspiring Through Fear,No Escape       
+7  Oberon  Emperor Palpatine   characters     12     22,699  85     7   Dark Side Support        Empire,Sith       Crackling Doom,Emperor of the Galactic Empire
+8  Oberon    General Veers     characters     10     17,757  85     7   Dark Side Support  Empire,Imperial Trooper             Aggressive Tactician             
+9  Oberon Grand Admiral Thrawn characters     12     20,227  85     7   Dark Side Support  Empire,Fleet Commander                  Ebb and Flow                 
+10 Oberon  Grand Moff Tarkin   characters     12     19,873  85     7   Dark Side Support  Empire,Fleet Commander               Callous Conviction              
+11 Oberon     Royal Guard      characters     10     14,401  85     7   Dark Side   Tank           Empire                               NA                      
+12 Oberon    Savage Opress     characters     11     18,705  85     7   Dark Side Attacker          Sith                               Brute                    
+13 Oberon     Sith Trooper     characters     11     16,120  85     7   Dark Side   Tank            Sith                                NA                      
+14 Oberon  TIE Fighter Pilot   characters     12     16,528  85     7   Dark Side Attacker         Empire                               NA                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
