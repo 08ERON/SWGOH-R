@@ -10,7 +10,7 @@ setwd("/path/to/your/working/directory")
 ### change repo to suit or use the one given
 repo <- "https://cran.csiro.au/"
 
-libraries <- c("data.table", "magrittr", "stringr")
+libraries <- c("data.table", "magrittr", "stringr", "gridExtra")
 to_be_installed <- libraries[!libraries %in% installed.packages()[,"Package"]]
 if(length(to_be_installed)) install.packages(to_be_installed,  repos = )
 
@@ -52,6 +52,9 @@ sapply(1:length(match_cols), function(x) {
 write.table(player_data, "subset_data.csv", sep=",", row.names=F, qmethod='double')
 write.table(player_data, "subset_data.tsv", sep="\t", row.names=F, qmethod='double')
 
+png(filename = "subset_data.png", width=1050,height=24*player_data[, .N])
+grid.table(player_data)
+dev.off()
 
 
 

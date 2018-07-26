@@ -12,9 +12,9 @@ setwd("/path/to/your/working/directory")
 ### change repo to suit or use the one given
 repo <- "https://cran.csiro.au/"
 
-libraries <- c("data.table", "magrittr")
+libraries <- c("data.table", "magrittr", "gridExtra")
 to_be_installed <- libraries[!libraries %in% installed.packages()[,"Package"]]
-if(length(to_be_installed)) install.packages(to_be_installed,  repos = )
+if(length(to_be_installed)) install.packages(to_be_installed,  repos = repo)
 
 sapply(libraries, library, character.only = T, quietly = T)
 
@@ -45,7 +45,9 @@ subset_data <- guild_data[base_id == baseid & stars == char_stars,
 write.table(subset_data, "subset_data.csv", sep=",", row.names=F, qmethod='double')
 write.table(subset_data, "subset_data.tsv", sep="\t", row.names=F, qmethod='double')
 
- 
+png(filename = "subset_data.png", width=480,height=24*subset_data[, .N])
+grid.table(subset_data)
+dev.off()
  
  
  
