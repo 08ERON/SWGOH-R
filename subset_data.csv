@@ -1,34 +1,15 @@
-"name","player","stars","level","gear_level","power"
-"Admiral Ackbar","YimYames",7,79,8,11470
-"Admiral Ackbar","Bullet",7,85,8,11659
-"Admiral Ackbar","Sarith LeKit",7,85,8,11956
-"Admiral Ackbar","DarthHelmet",7,85,8,12652
-"Admiral Ackbar","Wes Biriuk",7,85,9,13372
-"Admiral Ackbar","Blaine",7,85,9,13675
-"Admiral Ackbar","lisalala",7,85,9,13708
-"Admiral Ackbar","kallah",7,85,9,13728
-"Admiral Ackbar","Kelsier",7,85,9,13728
-"Admiral Ackbar","Apathy",7,85,9,13855
-"Admiral Ackbar","Scrubz",7,85,9,14358
-"Admiral Ackbar","Rac00n",7,85,10,14364
-"Admiral Ackbar","Mhann Uhdea",7,85,10,14643
-"Admiral Ackbar","Lexicon",7,85,10,15171
-"Admiral Ackbar","GrandmasterHardy",7,85,11,15219
-"Admiral Ackbar","Kems",7,85,10,15252
-"Admiral Ackbar","Rufuska",7,85,11,15501
-"Admiral Ackbar","NostraDazmous",7,85,11,15525
-"Admiral Ackbar","Smartinsk",7,85,11,15525
-"Admiral Ackbar","boogstien",7,85,10,15528
-"Admiral Ackbar","Oberon",7,85,11,15573
-"Admiral Ackbar","btrie",7,85,11,15591
-"Admiral Ackbar","Martyvu",7,85,11,15591
-"Admiral Ackbar","RogueSparrow",7,85,11,15705
-"Admiral Ackbar","Kaos",7,85,11,15705
-"Admiral Ackbar","Code",7,85,11,15723
-"Admiral Ackbar","Zordo",7,85,11,15903
-"Admiral Ackbar","D'Artagnan",7,85,11,15903
-"Admiral Ackbar","Cyrus Sophus",7,85,11,16035
-"Admiral Ackbar","Peps",7,85,11,16251
-"Admiral Ackbar","Adam",7,85,11,16299
-"Admiral Ackbar","DJ Harr0w",7,85,11,16497
-"Admiral Ackbar","Tez",7,85,11,16497
+"player","name","type","gear_level","power","level","stars","Alignment","Role","Affiliation","zeta"
+"Oberon","Count Dooku","characters",10,11469,85,6,"Dark Side","Support","Separatist,Sith","NA"
+"Oberon","Darth Maul","characters",9,14224,85,7,"Dark Side","Attacker","Sith","NA"
+"Oberon","Darth Nihilus","characters",12,22147,85,7,"Dark Side","Support","Sith","Lord of Hunger,Strength of the Void"
+"Oberon","Darth Sidious","characters",11,18903,85,7,"Dark Side","Attacker","Sith","Sadistic Glee"
+"Oberon","Darth Sion","characters",12,20293,85,7,"Dark Side","Tank","Sith","Lord of Pain"
+"Oberon","Darth Vader","characters",12,22909,85,7,"Dark Side","Attacker","Empire,Sith","Inspiring Through Fear,No Escape"
+"Oberon","Emperor Palpatine","characters",12,22699,85,7,"Dark Side","Support","Empire,Sith","Crackling Doom,Emperor of the Galactic Empire"
+"Oberon","General Veers","characters",10,17757,85,7,"Dark Side","Support","Empire,Imperial Trooper","Aggressive Tactician"
+"Oberon","Grand Admiral Thrawn","characters",12,20227,85,7,"Dark Side","Support","Empire,Fleet Commander","Ebb and Flow"
+"Oberon","Grand Moff Tarkin","characters",12,19873,85,7,"Dark Side","Support","Empire,Fleet Commander","Callous Conviction"
+"Oberon","Royal Guard","characters",10,14401,85,7,"Dark Side","Tank","Empire","NA"
+"Oberon","Savage Opress","characters",11,18705,85,7,"Dark Side","Attacker","Sith","Brute"
+"Oberon","Sith Trooper","characters",11,16120,85,7,"Dark Side","Tank","Sith","NA"
+"Oberon","TIE Fighter Pilot","characters",12,16528,85,7,"Dark Side","Attacker","Empire","NA"
