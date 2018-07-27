@@ -34,21 +34,25 @@ guild_data <- fread("final_output.csv")
 ### change which columns you want to keep as default
 in_cols <- c("name", "player", "stars", "level", "gear_level", "power", "zeta_1", "zeta_2", "zeta_3")
 
-### remove NA columns
 
+### remove NA columns
 subset_data <- guild_data[base_id == baseid & stars >= char_stars,  
-           lapply(.SD, function(x) if(all(!is.na(x))) return(x)),
+           lapply(.SD, function(x) if(any(!is.na(x))) return(x)),
            .SDcols = in_cols]
 
+### make zetas into one column
+zeta_cols_inds <- grep("zeta_", colnames(subset_data))
+subset_data[, zeta := gsub(",NA", "", do.call(paste, c(.SD, sep=","))), by=list(player, name), .SDcols=zeta_cols_inds]
+subset_data <- subset_data[, list(stars, level, gear_level, power, zeta), by=list(name, player)]
 
 ### output in both csv and tsv
 write.table(subset_data, "subset_data.csv", sep=",", row.names=F, qmethod='double')
 write.table(subset_data, "subset_data.tsv", sep="\t", row.names=F, qmethod='double')
 
-png(filename = "subset_data.png", width=480,height=24*subset_data[, .N])
+png(filename = "subset_data.png", width=960,height=24*subset_data[, .N])
 grid.table(subset_data)
 dev.off()
- 
+
 stargazer(subset_data, type='text', out = "subset_data.txt", summary=F)
 stargazer(subset_data, type='html', out = "subset_data.html", summary=F)
 
