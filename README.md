@@ -8,7 +8,7 @@ We recommend using the data scraper as a daily task (eg a cronjob) to avoid hitt
 
 
 
-`guild_data_reshape_func.R` is a separate data subsetting/reshaping function to subset the data from the previous script. For this you need to provide two args, the toon nickname and number of stars of that toon, and you can edit the `char_ships_nicknames.csv` file to change the nicknames and abbreviations as you want. They don't need to be in any specific order. An example:  
+`guild_data_reshape_func.R` is a separate data subsetting/reshaping function to subset the data from the previous script. For this you need to provide two args, the toon nickname and minimum number of stars of that toon, and you can edit the `char_ships_nicknames.csv` file to change the nicknames and abbreviations as you want. They don't need to be in any specific order. An example:  
 `Rscript.exe guild_data_reshape_func.R AA 7`  
   
 `team_builder_func.R` is a data subsetting function allows guild members to search their own toons for suitable team candidates. Searchable fields are:  
