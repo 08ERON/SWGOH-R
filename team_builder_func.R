@@ -12,9 +12,9 @@ repo <- "https://cran.csiro.au/"
 
 libraries <- c("data.table", "magrittr", "stringr", "gridExtra", "stargazer")
 to_be_installed <- libraries[!libraries %in% installed.packages()[,"Package"]]
-if(length(to_be_installed)) install.packages(to_be_installed,  repos = )
+if(length(to_be_installed)) install.packages(to_be_installed,  repos = repo )
 
-sapply(libraries, library, character.only = T, quietly = T)
+sapply(libraries, library, character.only = T, quietly = T) %>% invisible
 
 subset_args <- commandArgs(trailingOnly = T)
 
