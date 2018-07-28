@@ -16,7 +16,7 @@ libraries <- c("data.table", "magrittr", "gridExtra", "stargazer")
 to_be_installed <- libraries[!libraries %in% installed.packages()[,"Package"]]
 if(length(to_be_installed)) install.packages(to_be_installed,  repos = repo)
 
-sapply(libraries, library, character.only = T, quietly = T)
+sapply(libraries, library, character.only = T, quietly = T) %>% invisible
 
 subset_args <- commandArgs(trailingOnly = T)
 
@@ -40,11 +40,12 @@ subset_data <- guild_data[base_id == baseid & stars >= char_stars,
            lapply(.SD, function(x) if(any(!is.na(x))) return(x)),
            .SDcols = in_cols]
 
-### make zetas into one column
-zeta_cols_inds <- grep("zeta_", colnames(subset_data))
-subset_data[, zeta := gsub(",NA", "", do.call(paste, c(.SD, sep=","))), by=list(player, name), .SDcols=zeta_cols_inds]
-subset_data <- subset_data[, list(stars, level, gear_level, power, zeta), by=list(name, player)]
-
+### if any zetas present, make zetas into one column
+    if(any(grepl("zeta", colnames(subset_data)))){
+        zeta_cols_inds <- grep("zeta_", colnames(subset_data))
+        subset_data[, zeta := gsub(",NA", "", do.call(paste, c(.SD, sep=","))), by=list(player, name), .SDcols=zeta_cols_inds]
+        subset_data <- subset_data[, list(stars, level, gear_level, power, zeta), by=list(name, player)]
+    }
 ### output in both csv and tsv
 write.table(subset_data, "subset_data.csv", sep=",", row.names=F, qmethod='double')
 write.table(subset_data, "subset_data.tsv", sep="\t", row.names=F, qmethod='double')
