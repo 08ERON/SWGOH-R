@@ -1,37 +1,40 @@
 
-============================================================================================================================
-        player                name           stars level gear_level power                        zeta                       
-----------------------------------------------------------------------------------------------------------------------------
-1      Kelsier      Commander Luke Skywalker   7    85       12     18,198                        NA                        
-2       Rac00n      Commander Luke Skywalker   7    85       12     18,672                        NA                        
-3      YimYames     Commander Luke Skywalker   7    85       11     19,035                It Binds All Things               
-4      Lexicon      Commander Luke Skywalker   7    85       12     20,448                It Binds All Things               
-5     boogstien     Commander Luke Skywalker   7    85       12     20,658                It Binds All Things               
-6       Oberon      Commander Luke Skywalker   7    85       12     20,658                It Binds All Things               
-7       btrie       Commander Luke Skywalker   7    85       12     20,802                It Binds All Things               
-8    DarthHelmet    Commander Luke Skywalker   7    85       12     20,964                It Binds All Things               
-9   NostraDazmous   Commander Luke Skywalker   7    85       12     21,078                It Binds All Things               
-10       Adam       Commander Luke Skywalker   7    85       12     21,078                It Binds All Things               
-11    Wes Biriuk    Commander Luke Skywalker   7    85       12     21,078                It Binds All Things               
-12     Rufuska      Commander Luke Skywalker   7    85       12     21,078                It Binds All Things               
-13 GrandmasterHardy Commander Luke Skywalker   7    85       12     21,078                It Binds All Things               
-14       Code       Commander Luke Skywalker   7    85       12     21,078                It Binds All Things               
-15      Bullet      Commander Luke Skywalker   7    85       12     21,078                It Binds All Things               
-16      Apathy      Commander Luke Skywalker   7    85       12     21,078                It Binds All Things               
-17      Blaine      Commander Luke Skywalker   7    85       12     23,418         Learn Control,It Binds All Things        
-18     Martyvu      Commander Luke Skywalker   7    85       12     23,418         Learn Control,It Binds All Things        
-19       Kems       Commander Luke Skywalker   7    85       12     23,418        Rebel Maneuvers,It Binds All Things       
-20     lisalala     Commander Luke Skywalker   7    85       12     23,484         Learn Control,It Binds All Things        
-21      Zordo       Commander Luke Skywalker   7    85       12     23,484        Rebel Maneuvers,It Binds All Things       
-22   Cyrus Sophus   Commander Luke Skywalker   7    85       12     23,484         Learn Control,It Binds All Things        
-23      kallah      Commander Luke Skywalker   7    85       12     23,484         Learn Control,It Binds All Things        
-24    Smartinsk     Commander Luke Skywalker   7    85       12     23,484         Learn Control,It Binds All Things        
-25       Peps       Commander Luke Skywalker   7    85       12     23,484         Learn Control,It Binds All Things        
-26    D'Artagnan    Commander Luke Skywalker   7    85       12     23,484         Learn Control,It Binds All Things        
-27   Sarith LeKit   Commander Luke Skywalker   7    85       12     23,484         Learn Control,It Binds All Things        
-28    DJ Harr0w     Commander Luke Skywalker   7    85       12     23,484         Learn Control,It Binds All Things        
-29   Mhann Uhdea    Commander Luke Skywalker   7    85       12     25,890 Rebel Maneuvers,Learn Control,It Binds All Things
-30       Tez        Commander Luke Skywalker   7    85       12     25,890 Rebel Maneuvers,Learn Control,It Binds All Things
-31       Kaos       Commander Luke Skywalker   7    85       12     25,890 Rebel Maneuvers,Learn Control,It Binds All Things
-32   RogueSparrow   Commander Luke Skywalker   7    85       12     25,890 Rebel Maneuvers,Learn Control,It Binds All Things
-----------------------------------------------------------------------------------------------------------------------------
+====================================================================================================================
+        name           player      stars level gear_level power                         zeta                        
+--------------------------------------------------------------------------------------------------------------------
+1  Asajj Ventress       Code         7    85       12     23,319 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+2  Asajj Ventress      btrie         7    85       12     22,851 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+3  Asajj Ventress     Drewish        7    85       12     22,737 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+4  Asajj Ventress    D'Artagnan      7    85       12     23,205 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+5  Asajj Ventress       Peps         7    85       12     22,447 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+6  Asajj Ventress     YimYames       7    85       11     21,388 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+7  Asajj Ventress     Kelsier        7    85       12     20,890             uniqueskill_ASAJVENTRESS01             
+8  Asajj Ventress      Oberon        7    85       12     23,362 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+9  Asajj Ventress    boogstien       7    85       12     22,506 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+10 Asajj Ventress     doctorx        7    85       12     23,047 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+11 Asajj Ventress       Tez          7    85       12     21,028              leaderskill_ASAJVENTRESS              
+12 Asajj Ventress   Sarith LeKit     7    85       11     19,377             uniqueskill_ASAJVENTRESS01             
+13 Asajj Ventress      Apathy        7    85       12     20,331             uniqueskill_ASAJVENTRESS01             
+14 Asajj Ventress       Adam         7    85       12     23,248 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+15 Asajj Ventress   Mhann Uhdea      7    85       6      11,152                         NA                         
+16 Asajj Ventress       Kems         7    85       12     20,589             uniqueskill_ASAJVENTRESS01             
+17 Asajj Ventress  NostraDazmous     7    85       12     23,067 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+18 Asajj Ventress      kallah        7    85       12     22,782 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+19 Asajj Ventress  AsahiSuperdry     7    85       11     17,077                         NA                         
+20 Asajj Ventress   DarthHelmet      7    85       12     17,178                         NA                         
+21 Asajj Ventress    DJ Harr0w       7    85       12     20,143             uniqueskill_ASAJVENTRESS01             
+22 Asajj Ventress     Martyvu        7    85       12     22,852 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+23 Asajj Ventress     Lexicon        7    85       12     22,560 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+24 Asajj Ventress      Zordo         7    85       12     22,783 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+25 Asajj Ventress   Cyrus Sophus     7    85       12     22,785 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+26 Asajj Ventress     Rufuska        7    85       12     23,202 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+27 Asajj Ventress    Wes Biriuk      7    85       11     21,555 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+28 Asajj Ventress     lisalala       7    85       10     15,859                         NA                         
+29 Asajj Ventress   RogueSparrow     7    85       12     20,218              leaderskill_ASAJVENTRESS              
+30 Asajj Ventress      Bullet        7    85       11     22,329 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+31 Asajj Ventress    Smartinsk       7    85       12     20,328             uniqueskill_ASAJVENTRESS01             
+32 Asajj Ventress      Scrubz        7    85       11     20,959 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+33 Asajj Ventress GrandmasterHardy   7    85       12     22,903 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+34 Asajj Ventress      Rac00n        7    85       12     23,320 uniqueskill_ASAJVENTRESS01,leaderskill_ASAJVENTRESS
+35 Asajj Ventress      Blaine        7    85       11     18,891             uniqueskill_ASAJVENTRESS01             
+--------------------------------------------------------------------------------------------------------------------
