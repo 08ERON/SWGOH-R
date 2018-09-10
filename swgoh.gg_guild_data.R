@@ -3,8 +3,7 @@
 
 ### edit these
 setwd("/path/to/your/working/directory")
-guild_api       <- "https://swgoh.gg/api/guilds/1454/units"
-guild_zeta_url  <- "http://swgoh.gg/g/1454/basedeltazero/zetas/"
+guild_api       <- "https://swgoh.gg/api/guild/1454"
 repo            <- "https://cran.csiro.au/"
 
 #### call libraries and if absent install and call them
@@ -16,61 +15,79 @@ sapply(libraries, library, character.only = T, quietly = T)
 
 char_api        <- "http://swgoh.gg/api/characters/"
 ships_api       <- "http://swgoh.gg/api/ships/"
-light_side_url  <- "https://swgoh.gg/characters/f/light%20side/"
-dark_side_url   <- "https://swgoh.gg/characters/f/dark%20side/"
 
 # guild data
-data_dt_0 <- fromJSON(guild_api) %>% rbindlist(fill=T, use.names=TRUE, idcol=T) 
-setnames(data_dt_0, c(".id", 'rarity'), c("base_id", 'stars'))
+data_list <- fromJSON(guild_api) 
 
-#### alignment
-html_convert_func   <- function(u){
-  alignment_html    <- read_html(u)
-  vec_0 <- str_split(xml_text(alignment_html), "\n")[[1]]
-  vec_1 <- str_split(vec_0[grep("Side", vec_0)], " . ") 
-  dt_0  <- llply(vec_1, function(x) data.table(rbind(x))) %>% rbindlist(fill=T)
-  dt_1  <- cbind(name = vec_0[grep("Side", vec_0)+1], dt_0)
-  dt_1  <- dt_1[name!=""]
-  dt_1[, name := gsub("^ ", "", name)]
-  aff_names <- paste0("Affiliation_", 1:(ncol(dt_1)-3))
-  setnames(dt_1, colnames(dt_1)[-1], c("Alignment", "Role", aff_names))
-  return(dt_1)
-}
+# get player data for the player url
+# (this is used as the index in the JS object)
+guild_summary_dt <- data_list$players$data %>% data.table
+guild_player_dt_0 <- ldply(data_list$players$units, function(x) x$data[, c("url", "base_id", "gear_level", "power", "rarity", "level", "zeta_abilities")]) %>% data.table
+guild_player_dt_0[, ally_code := str_extract(url, "[0-9]{9}") %>% as.integer]
+guild_player_dt <- left_join(guild_player_dt_0, guild_summary_dt[, list(name, ally_code)], by='ally_code') %>% data.table
+setnames(guild_player_dt, "name", "player")
 
-alignment_dt <- rbind(html_convert_func(light_side_url), html_convert_func(dark_side_url), fill=T)
+##### stats definitions
+## 1: Health
+## 2: Strength
+## 3: Agility
+## 4: Tactics
+## 5: Speed
+## 6: Physical Damage
+## 7: Special Damage
+## 8: Armor
+## 9: Resistance
+## 10: Armor Penetration
+## 11: Resistance Penetration
+## 12: Dodge Chance ? Deflection Chance
+## 13: Dodge Chance ? Deflection Chance 
+## 14: Physical Critical Chance
+## 15: Special Critical Chance
+## 16: Critical Damage
+## 17: Potency
+## 18: Tenacity
+## 27: Health Steal
+## 28: Protection
+## 37: Physical Accuracy ? Special Accuracy
+## 38: Physical Accuracy ? Special Accuracy
+## 39: Physical Critical Avoidance ? Special Critical Avoidance
+## 40: Physical Critical Avoidance ? Special Critical Avoidance
 
-#### other general data
-char_dt0 <- fromJSON(char_api) %>% data.table 
+#### char and ship data
+
+char_dt0 <- fromJSON(char_api) %>% data.table
+char_dt <- char_dt0[, list(name, base_id, url, alignment , role, categories)]
 ships_dt0 <- fromJSON(ships_api) %>% data.table 
+ships_dt <- ships_dt0[, list(name, base_id, url, alignment , role, categories)]
 
-char_ships_dt0 <- rbind(char_dt0[, list(base_id, name, type="characters")], 
-                        ships_dt0[, list(base_id, name, type="ships")])
+char_ships_alignment <- rbind(cbind(char_dt, type="characters"), 
+                              cbind(ships_dt, type="ships"))
+
+saveRDS(char_ships_alignment, "output_data/char_ships_alignment.rds")
 
 ### join with guild data
-data_dt <-  left_join(char_ships_dt0, data_dt_0, by="base_id") %>% data.table
-data_dt[is.na(stars), stars := 0]
-data_dt_1 <- left_join(data_dt, alignment_dt, by='name') %>% data.table
+data_dt_0 <-  inner_join(char_ships_alignment, guild_player_dt, by="base_id") %>% data.table
+data_dt_0[is.na(rarity), rarity := 0]
+setnames(data_dt_0, "rarity", "stars")
 
-##### zetas 
-guild_zeta_html <- read_html(guild_zeta_url)
+data_dt_1 <- data_dt_0[, list(player, ally_code, name, base_id, alignment, role, gear_level, power, stars, level)]
 
-#### groups data referring to a player
-guild_member_html_data <- xml_find_all(guild_zeta_html, ".//tr")
+#### fixing categories and zeta abilities
+categories <- llply(data_dt_0$categories, function(x) {
+    DT <- data.table(rbind(x))
+    if(nrow(DT) == 0) DT <- data.table(V1=NA)
+    return(DT)}) %>% rbindlist(fill=T)
 
-guild_member_zetas <- sapply(2:length(guild_member_html_data), function(x){
-        player_data <- guild_member_html_data[x]
-        player <- xml_find_first(player_data, ".//strong") %>% xml_text
-        zeta_attrs <- xml_attrs(xml_find_all(player_data, ".//img"))
-        player_zetas_0 <- lapply(zeta_attrs, function(x) rbind(x) %>% data.table) %>%
-                                rbindlist(fill=T)
-        player_zetas_0[, alt := na.locf(alt)]
-        player_zetas_0 <- player_zetas_0[!is.na(title), list(player, name = alt, zeta = title)]
-        player_zetas_0[, zeta_cols := paste0("zeta_", 1:.N), by=name]
-        player_zetas <- dcast(player_zetas_0, player+name~zeta_cols, value.var = "zeta")
-        return(player_zetas)
-}, simplify=F) %>% rbindlist(fill=T)
+setnames(categories, paste0("V", 1:ncol(categories)), paste0("Affiliation", 1:ncol(categories)))
 
-final_output <- left_join(data_dt_1, guild_member_zetas, by=c("player","name")) %>% data.table
+zeta_abilities <- llply(data_dt_0$zeta_abilities, function(x) {
+    DT <- data.table(rbind(x))
+    if(nrow(DT) == 0) DT <- data.table(V1=NA)
+    return(DT)}) %>% rbindlist(fill=T)
+setnames(zeta_abilities, paste0("V", 1:ncol(zeta_abilities)), paste0("zeta_", 1:ncol(zeta_abilities))) 
+
+final_output <- cbind(data_dt_1, categories, zeta_abilities)
 
 write.table(final_output, "final_output.csv", sep=",", row.names=F, qmethod='double')
 write.table(final_output, "final_output.tsv", sep="\t", row.names=F, qmethod='double')
+
