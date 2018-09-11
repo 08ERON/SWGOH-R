@@ -19,7 +19,7 @@ We recommend using the data scraper as a daily task (eg a cronjob) to avoid hitt
 Run the script with args describing the columns you want and the allowable values of the subset of data in which you're interested. If you have multiple search terms for a field (think a regex "or") separate the field values with commas.  
 
 For example if you want to find all of guild member Oberon's  level 85, 7 star toons at gear level greater than 8 and Affiliation with either Sith or Empire and any role or power level:  
-`Rscript.exe guild_data_reshape_func.R player=Oberon stars=7 level=85 power=any gear_level=9,10,11,12 Affiliation=Sith,Empire Role=any`
+`Rscript.exe team_builder_func.R player=Oberon stars=7 level=85 power=any gear_level=9,10,11,12 Affiliation=Sith,Empire Role=any`
 
 Tables output file formats:  `.csv`, `.tsv`, `.png`, `.html`, and `.txt` 
 
