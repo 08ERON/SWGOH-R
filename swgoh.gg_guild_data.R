@@ -63,14 +63,12 @@ ships_dt <- ships_dt0[, list(name, base_id, url, alignment , role, categories)]
 char_ships_alignment <- rbind(cbind(char_dt, type="characters"), 
                               cbind(ships_dt, type="ships"))
 
-saveRDS(char_ships_alignment, "output_data/char_ships_alignment.rds")
-
 ### join with guild data
 data_dt_0 <-  inner_join(char_ships_alignment, guild_player_dt, by="base_id") %>% data.table
 data_dt_0[is.na(rarity), rarity := 0]
 setnames(data_dt_0, "rarity", "stars")
 
-data_dt_1 <- data_dt_0[, list(player, ally_code, name, base_id, alignment, role, gear_level, power, stars, level)]
+data_dt_1 <- data_dt_0[, list(player, ally_code, name, type, base_id, alignment, role, gear_level, power, stars, level)]
 
 #### fixing categories and zeta abilities
 categories <- llply(data_dt_0$categories, function(x) {
@@ -78,7 +76,7 @@ categories <- llply(data_dt_0$categories, function(x) {
     if(nrow(DT) == 0) DT <- data.table(V1=NA)
     return(DT)}) %>% rbindlist(fill=T)
 
-setnames(categories, paste0("V", 1:ncol(categories)), paste0("Affiliation", 1:ncol(categories)))
+setnames(categories, paste0("V", 1:ncol(categories)), paste0("Affiliation_", 1:ncol(categories)))
 
 zeta_abilities <- llply(data_dt_0$zeta_abilities, function(x) {
     DT <- data.table(rbind(x))

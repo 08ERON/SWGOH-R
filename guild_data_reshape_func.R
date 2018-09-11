@@ -16,7 +16,7 @@ libraries <- c("data.table", "magrittr", "gridExtra", "stargazer")
 to_be_installed <- libraries[!libraries %in% installed.packages()[,"Package"]]
 if(length(to_be_installed)) install.packages(to_be_installed,  repos = repo)
 
-sapply(libraries, library, character.only = T, quietly = T) %>% invisible
+invisible(sapply(libraries, library, character.only = T, quietly = T))
 
 subset_args <- commandArgs(trailingOnly = T)
 

@@ -14,14 +14,15 @@ libraries <- c("data.table", "magrittr", "stringr", "gridExtra", "stargazer")
 to_be_installed <- libraries[!libraries %in% installed.packages()[,"Package"]]
 if(length(to_be_installed)) install.packages(to_be_installed,  repos = repo )
 
-sapply(libraries, library, character.only = T, quietly = T) %>% invisible
+invisible(sapply(libraries, library, character.only = T, quietly = T))
 
-subset_args <- commandArgs(trailingOnly = T)
+subset_args_0 <- commandArgs(trailingOnly = T)
 
-###testing
+### separate each command into a vector
+subset_args_1 <- do.call(c, str_split(subset_args_0, pattern=" "))
 
 ### interpreting args
-subset_args <- gsub(",", "|", subset_args)
+subset_args <- gsub(",", "|", subset_args_1)
 subset_cols <- gsub("=", "", str_extract(subset_args, "^.+="))
 subset_vals <- gsub("=", "", str_extract(subset_args, "=.+$"))
 
@@ -37,7 +38,7 @@ guild_data[, Affiliation := gsub(",NA", "", do.call(paste, c(.SD, sep=","))), by
 guild_data[, zeta := gsub(",NA", "", do.call(paste, c(.SD, sep=","))), by=list(player, name), .SDcols=zeta_cols_inds]
 
 player_data <- guild_data[, list(type, gear_level, power, level, stars,
-                                 Alignment, Role, Affiliation, zeta), 
+                                 alignment, role, Affiliation, zeta), 
                             by=list(player, name)]
 
 
@@ -52,7 +53,7 @@ sapply(1:length(match_cols), function(x) {
 write.table(player_data, "subset_data.csv", sep=",", row.names=F, qmethod='double')
 write.table(player_data, "subset_data.tsv", sep="\t", row.names=F, qmethod='double')
 
-png(filename = "subset_data.png", width=1050,height=24*player_data[, .N])
+png(filename = "subset_data.png", width=1200,height=24*player_data[, .N])
 grid.table(player_data)
 dev.off()
 
