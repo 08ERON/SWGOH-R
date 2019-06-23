@@ -57,18 +57,22 @@ setnames(guild_player_dt, "name", "player")
 
 char_dt0 <- fromJSON(char_api) %>% data.table
 char_dt <- char_dt0[, list(name, base_id, url, alignment , role, categories)]
+char_dt[, leader := "no"]
+char_dt[grep("Leader", categories), leader := "yes"]
+
 ships_dt0 <- fromJSON(ships_api) %>% data.table 
 ships_dt <- ships_dt0[, list(name, base_id, url, alignment , role, categories)]
 
 char_ships_alignment <- rbind(cbind(char_dt, type="characters"), 
-                              cbind(ships_dt, type="ships"))
+                              cbind(ships_dt, type="ships"), fill=T)
 
 ### join with guild data
 data_dt_0 <-  inner_join(char_ships_alignment, guild_player_dt, by="base_id") %>% data.table
 data_dt_0[is.na(rarity), rarity := 0]
 setnames(data_dt_0, "rarity", "stars")
 
-data_dt_1 <- data_dt_0[, list(player, ally_code, name, type, base_id, alignment, role, gear_level, power, stars, level)]
+data_dt_1 <- data_dt_0[, list(player, ally_code, name, type, base_id, alignment, 
+                              role, gear_level, power, stars, level, leader)]
 
 #### fixing categories and zeta abilities
 categories <- llply(data_dt_0$categories, function(x) {
